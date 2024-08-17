@@ -1,0 +1,40 @@
+{
+  "compilerOptions": {
+    // Enable latest features
+    "lib": ["ESNext", "DOM"],
+    "target": "ESNext",
+    "module": "ESNext",
+    "moduleDetection": "force",
+    "jsx": "react",
+    "jsxFactory": "Html.createElement",
+    "jsxFragmentFactory": "Html.Fragment",
+    "allowJs": true,
+
+    // Bundler mode
+    "moduleResolution": "bundler",
+    "allowImportingTsExtensions": true,
+    "verbatimModuleSyntax": true,
+    "noEmit": true,
+
+    // Best practices
+    "strict": true,
+    "skipLibCheck": true,
+    "noFallthroughCasesInSwitch": true,
+
+    // Some stricter flags (disabled by default)
+    "noUnusedLocals": false,
+    "noUnusedParameters": false,
+    "noPropertyAccessFromIndexSignature": false,
+    "composite": true,
+    "downlevelIteration": false,
+    "allowSyntheticDefaultImports": true,
+    "forceConsistentCasingInFileNames": true,
+
+    "paths": {
+      "types": ["./types.d.ts"],
+      "middleware": ["./middleware/index.ts"],
+      "schema": ["./db/schema.ts"],
+      "logging": ["./logging.ts"]
+    }
+  }
+}
