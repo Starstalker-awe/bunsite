@@ -5,6 +5,6 @@ export type Element = JSX.Element | JSX.Element[] | Element;
 export type BlogEntry = {
     url: string,
     pretty: string,
-    content: string,
+    content: Element,
     featured: boolean
 };

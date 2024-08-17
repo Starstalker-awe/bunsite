@@ -1,7 +1,7 @@
 import type { BlogEntry } from "types";
 import Base from "./base";
 
-export default function Blog({ entry }: { entry: BlogEntry }) {
+export default function Blog(entry: BlogEntry) {
     return (
         <Base title={entry.pretty}>
             <div class="h-[50vh] bg-center bg-cover text-center flex justify-center items-center" style={`background-image: linear-gradient(#00000020, #00000020), url('/static/blogs/${entry.url}')`}>
