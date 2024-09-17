@@ -33,5 +33,6 @@ export const serveBlogs = (app: Elysia) => app
 .get("/blog", () => <Blogs blogs={blogs} />)
 .get("/blog/:blog", ({ params }) => {
     if (!urls.includes(params.blog)) { throw new NotFoundError()};
-    return <Blog entry={blogs.find(entry => entry.url === params.blog)!} />;
+    const blog = blogs.find(entry => entry.url === params.blog)!;
+    return <Blog url={blog.url} pretty={blog.pretty} featured={blog.featured} content={blog.content} />;
 }, { params: t.Object({ blog: t.String()})});
