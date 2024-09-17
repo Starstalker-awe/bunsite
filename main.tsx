@@ -12,6 +12,8 @@ import e404 from "./templates/e404";
 const sstart = performance.now();
 const server = new Elysia()
 .use(middleware.rateLimiter)
+.use(middleware.staticFiles)
+.use(middleware.serveBlogs)
 .use(html())
 
 .onError(({ code }) => { if (code === "NOT_FOUND") return new Response(e404() as string, { headers: { "Content-Type": "text/html" }})})
