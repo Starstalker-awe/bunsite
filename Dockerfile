@@ -3,7 +3,7 @@ WORKDIR /home/bun/site
 
 FROM base AS install
 RUN mkdir -p /temp/prod
-COPY package.json bun.lockb /temp/prod
+COPY package.json bun.lockb /temp/prod/
 RUN cd /temp/prod && bun install --frozen-lockfile --production
 
 FROM base
