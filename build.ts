@@ -34,3 +34,5 @@ await Promise.all([...new Bun.Glob("**/*.{js,css}").scanSync(publicdir)].map(asy
     return await Bun.write(`${publicdir}/compressed/${file}.br`, compressed);
 }));
 log(performance.now() - cstart, "Compress files");
+
+unlinkSync(`${import.meta.dir}/public/styles.css`);
