@@ -34,31 +34,3 @@
         ol { @apply list-decimal ml-8 };
     };
 };
-
-@layer components {
-    .step-container {
-        @apply flex justify-evenly md:mx-0 mx-6 shadow-xl px-2;
-        & > *:first-child { @apply w-1/5 };
-        & > *:last-child {
-            @apply lg:w-3/5 w-4/5 text-center;
-            
-            h2 {
-                @apply xl:text-6xl lg:text-5xl text-3xl font-medium lg:pb-12 pb-3 drop-shadow-lg;
-                text-shadow: 2px 2px 0 #a7a6a7;
-            };
-            p { @apply lg:text-xl md:text-base text-sm px-4 py-2 };
-        };
-    };
-};
-
-@layer components {
-    /*.modal {
-        @apply lg:w-[40%] md:w-2/3 w-4/5 py-12 p-4 outline-none text-center transition-all duration-300 bg-gradient-to-b from-white from-35% backdrop:bg-black/25;
-        .dialog-content {
-            @apply w-full h-full child:p-3;
-            .heading { @apply xl:text-3xl lg:text-2xl text-xl font-semibold };
-            .description { @apply lg:text-xl md:text-lg text-base font-medium lg:px-8 md:px-4 px-2 };
-            .gray-top-text { @apply text-base uppercase text-neutral-500 };
-        };
-    };*/
-};
