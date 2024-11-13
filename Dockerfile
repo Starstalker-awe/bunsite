@@ -1,4 +1,4 @@
-FROM oven/bun:1 AS base
+FROM oven/bun:alpine AS base
 WORKDIR /home/bun/site
 
 FROM base AS install
