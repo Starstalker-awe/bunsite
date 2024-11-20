@@ -1,4 +1,4 @@
-import { SITE_NAME } from "../constants";
+import { SITE_NAME, SITE_URL } from "../constants";
 import type { Element } from "types";
 import Header from "./header";
 import Footer from "./footer";
@@ -32,8 +32,8 @@ export default function Base({ children, head, title, Menu, header, footer, meta
                 {meta.og && <>
                     <meta name="og:description" content={meta.og.description} />
                     <meta name="og:title" content={meta.og.title} />
-                    <meta name="og:image" content={meta.og.image} />
-                    <meta name="og:url" content={meta.og.url} />
+                    <meta name="og:image" content={`http://${SITE_URL}/${meta.og.image}`} />
+                    <meta name="og:url" content={`http://${SITE_URL}/${meta.og.url}`} />
                 </>}
                 <meta name="robots" content="index, follow" />
                 <meta charset="UTF-8" />
