@@ -22,11 +22,7 @@ const server = new Elysia()
 
 
 try {
-    server.listen({ port: 3001 });
-
-    new Elysia()
-    .onRequest(({ request, redirect }) => redirect(`https://${new URL(request.url).href.slice(7)}`, 307))
-    .listen({ port: 3000 });
+    server.listen({ port: 3000 });
     log(performance.now() - sstart, "Start server");
     log(performance.now(), "Total start time");
 } catch(e: any) {
