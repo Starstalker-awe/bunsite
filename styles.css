@@ -20,17 +20,21 @@
 };
 
 @layer components {
-    .blog-content {
-        @apply my-12 xl:mx-96 lg:mx-72 md:mx-48 mx-12;
-        a { @apply text-primary hover:text-primary-dark duration-300 };
-        h1 { @apply xl:text-6xl lg:text-4xl text-2xl };
-        h2 { @apply xl:text-5xl lg:text-3xl text-2xl };
-        h3 { @apply xl:text-4xl lg:text-2xl text-xl };
-        h4 { @apply xl:text-3xl text-xl };
-        h5 { @apply xl:text-2xl lg:text-xl text-lg };
-        h6 { @apply xl:text-xl text-lg };
-        img { @apply shadow-xl rounded-md };
-        ul { @apply list-disc ml-8 };
-        ol { @apply list-decimal ml-8 };
-    };
+    h1, h2, h3, h4, h5 { @apply font-serif text-primaries-dark text-center mb-4 capitalize };
+    h1, h2, h3 { @apply font-medium };
+    h1, h2 { @apply text-shadow-small };
+    h3, h4 { @apply text-shadow-minor };
+    h1 { @apply md:text-9xl text-6xl };
+    h2 { @apply md:text-7xl text-5xl };
+    h3 { @apply md:text-6xl text-4xl };
+    h4 { @apply md:text-5xl text-3xl };
+    h5 { @apply md:text-4xl text-2xl };
+    p { @apply text-lg };
+    ul { @apply list-disc };
+    ol { @apply list-decimal };
+    li { @apply md:text-2xl text-xl mb-2 };
+    a { @apply cursor-pointer text-primary hover:text-primary-dark duration-300 };
+    
+    input, textarea { @apply w-full p-4 mb-2 rounded-2xl };
+    img { @apply shadow-2xl };
 };
