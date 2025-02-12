@@ -12,8 +12,7 @@ COPY . .
 
 RUN mkdir /home/bun/site/blogs
 RUN mkdir /home/bun/site/public
-RUN chown -R bun:bun /home/bun/site/public
+RUN chown -R 1000:1000 /home/bun/site/public
 
-USER bun
 EXPOSE 3000/tcp
 ENTRYPOINT [ "bun", "run", "main.tsx" ]
