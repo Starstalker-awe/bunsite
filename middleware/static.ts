@@ -17,7 +17,8 @@ const MIMETYPES: {[key: string]: string} = {
     webp: "image/webp",
     txt: "text/plain",
     pdf: "application/pdf",
-    ico: "image/x-icon"
+    ico: "image/x-icon",
+    svg: "image/svg+xml"
 } as const;
 
 const pdir = `${import.meta.dir}/../public/`;
